@@ -1,0 +1,91 @@
+/* Express Yourself — shared styles (v2 with image areas on each page) */
+:root{
+  --brand: #A8D8FF;      /* sky blue */
+  --brand-2: #e8f5ff;
+  --accent: #FFD86B;     /* sunshine yellow */
+  --ink: #1f2937;        /* slate */
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --alt: #f7fafc;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+*{ box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body{
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container{ width: min(1100px, 92%); margin: 0 auto; }
+.section{ padding: 64px 0; }
+.section.alt{ background: var(--alt); }
+
+/* Header */
+.site-header{
+  position: sticky; top: 0; z-index: 40;
+  background: var(--brand);
+  box-shadow: var(--shadow);
+}
+.header-inner{ display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.logo{ font-weight: 700; font-size: 22px; text-decoration: none; color: #0b1a2b; }
+.logo span{ opacity: .75; }
+.nav a{ margin-left: 18px; text-decoration: none; color: #0b1a2b; font-weight: 600; }
+
+/* Hero */
+.hero.home{ background: linear-gradient(180deg, var(--brand), var(--brand-2) 60%); padding: 56px 0; }
+.hero-grid{ display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; }
+.hero-copy h1{ font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 0 0 8px; }
+.hero-copy p{ color: var(--muted); max-width: 58ch; margin: 0 0 14px; }
+.hero-ctas{ display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-art img{ width: 100%; max-width: 440px; display: block; margin-inline: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* Cards */
+.cards{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; }
+.card{ background: #fff; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+.card .icon{ width: 44px; height: 44px; }
+
+/* Two column layout */
+.two-col{ display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; }
+.artbox{ background: var(--alt); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); }
+.artbox img{ width: 100%; display: block; border-radius: var(--radius); }
+
+/* Pricing */
+.pricing{ display: grid; justify-content: start; }
+.price-card{
+  background: #fff; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); max-width: 420px;
+}
+.price-card h2{ font-size: 40px; margin: 0 0 8px; }
+.price-card h2 span{ font-size: 16px; color: var(--muted); }
+.price-card ul{ margin: 0 0 16px 18px; }
+
+/* CTA banner */
+.cta-banner{
+  margin-top: 22px; padding: 18px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: center;
+}
+
+/* Contact form */
+.contact-form .grid{ display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
+.contact-form label{ display: flex; flex-direction: column; gap: 6px; }
+.contact-form label.full{ grid-column: 1 / -1; }
+input, textarea, select{ padding: 12px 14px; border: 1.5px solid #e5e7eb; border-radius: 10px; font: inherit; }
+input:focus, textarea:focus, select:focus{ outline: none; border-color: var(--brand); box-shadow: 0 0 0 4px rgba(168,216,255,0.35); }
+
+/* Buttons */
+.btn{ display: inline-block; text-decoration: none; border-radius: 10px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; }
+.btn.primary{ background: var(--accent); color: #111827; }
+.btn.outline{ background: transparent; border-color: #0b1a2b; color: #0b1a2b; }
+
+/* Footer */
+.site-footer{ padding: 28px 0; background: #f3f4f6; text-align: center; color: #4b5563; }
+
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+  .cta-banner{ grid-template-columns: 48px 1fr; }
+  .contact-form .grid{ grid-template-columns: 1fr; }
+}

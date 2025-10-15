@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact — Express Yourself</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Express<span>Yourself</span></a>
+      <nav class="nav">
+        <a href="about.html">About</a>
+        <a href="sessions.html">Book a Session</a>
+        <a href="groups.html">Free Groups</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h1>Contact</h1>
+        <p>Parents and students — reach out with questions, to book a session, or to join the next free group.</p>
+
+        <form class="chatbox-form" action="https://formspree.io/f/your-form-id" method="POST">
+  <div class="chatbox">
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name" placeholder="Type your name..." required>
+
+    <label for="email">Your Email</label>
+    <input type="email" name="email" id="email" placeholder="Type your email..." required>
+
+    <label for="grade">Student Grade</label>
+    <input type="text" name="grade" id="grade" placeholder="e.g., Grade 9">
+
+    <label for="interest">What are you interested in?</label>
+    <select name="interest" id="interest">
+      <option value="private">Private coaching ($20/hr)</option>
+      <option value="group">Free group sessions</option>
+      <option value="school-workshop">School workshop</option>
+    </select>
+
+    <label for="message">Your Message</label>
+    <textarea name="message" id="message" rows="4" placeholder="Ask me anything! I’ll get back to you soon."></textarea>
+
+    <button type="submit" class="btn primary">Send Message</button>
+  </div>
+        </form>
+
+        <p class="contact-note">
+  📧 Email: <a href="mailto:kbhanda6@uwo.ca">kbhanda6@uwo.ca</a><br>
+  📞 Phone: <a href="tel:9054077073">905-407-7073</a>
+</p>
+
+      <div class="artbox">
+        <img src="assets/contact-photo.jpg" alt="Kaya speaking to an audience">
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container"><p>© 2025 Express Yourself — Youth Public Speaking Coaching • London, Ontario</p></div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
